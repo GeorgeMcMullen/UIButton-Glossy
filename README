@@ -1,0 +1,19 @@
+Glossy buttons are great to have but a pain to create, especially if you are relying on images. Any new button will require you to create the button all over again. Using stretchable images is a help sometimes, but you'll still have a problem once you want to create a new button with a different color. 
+
+This has been pondered over for quite a while and there are a good number of solutions out there. I take my inspiration from the following sources:
+
+http://www.mlsite.net/blog/?p=1837
+This was the first place I found that showed glossy buttons that really looked glossy and were programatically created. Unfortunately, I found the code to be very complex and gave the buttons a yellowish tint, which I didn't like.
+
+http://stackoverflow.com/questions/7477652/how-to-get-black-glossy-uibutton-look
+This has a snippet of code, but I tightened it up and put a category class around it.
+
+What's great about this is that adding gloss to a button is a breeze and you can set up your buttons using Interface Builder. Just set up your button in interface builder as a custom button and set the background color to the color you want the button to be. Then in your code, just add:
+
+	#import "UIButton+Glossy.h"
+
+and then in your -viewDidLoad:
+
+	[whateverYourButtonIsCalled makeGlossy];
+
+Source will be either MIT or BSD licensed, whatever I find is more suitable. As this is the first check-in, it may contain some errors. Until I clear everything up and put a project around it, use with caution. 
